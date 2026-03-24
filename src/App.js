@@ -1,36 +1,27 @@
-// Import necessary CSS and Bootstrap for styling
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Import components for the different sections of the app
 import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import { HomePage } from "./pages/HomePage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 
 function App() {
   return (
-    <div className="App">
-      {/* Navigation bar at the top */}
-      <NavBar />
-      
-      {/* Banner section */}
-      <Banner />
-      
-      {/* Skills section */}
-      <Skills />
-      
-      {/* Projects section */}
-      <Projects />
-      
-      {/* Contact form section */}
-      <Contact />
-      
-      {/* Footer at the bottom */}
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:slug" element={<ServiceDetailPage />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
+
 export default App;

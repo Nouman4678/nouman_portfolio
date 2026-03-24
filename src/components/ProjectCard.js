@@ -5,10 +5,10 @@ import { Col, Button } from "react-bootstrap";
 export const ProjectCard = ({ title, description, imgUrl, url }) => {
   return (
     // Column for the project card
-    <Col size={12} sm={6} md={6}>
+    <Col xs={12} sm={6} md={6}>
       <div className="proj-imgbx">
         {/* Project image */}
-        <img src={imgUrl} alt="proj" />
+        <img src={imgUrl} alt={`${title} preview`} loading="lazy" />
         <div className="proj-txtx">
           {/* Project title */}
           <h4>{title}</h4>

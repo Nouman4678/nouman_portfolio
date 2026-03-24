@@ -12,7 +12,7 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           {/* Column for the contact image */}
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <img
@@ -27,7 +27,7 @@ export const Contact = () => {
           </Col>
           
           {/* Column for the contact form */}
-          <Col size={12} md={6}>
+          <Col xs={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
@@ -52,28 +52,31 @@ export const Contact = () => {
                     
                     {/* Input fields for the form */}
                     <Row>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
                         <input
                           type="text"
                           id="name"
                           name="name"
                           placeholder="First Name"
+                          required
                         />
                       </Col>
-                      <Col size={12} sm={6} className="px-1">
+                      <Col xs={12} sm={6} className="px-1">
                         <input
                           type="email"
                           id="email"
                           name="email"
                           placeholder="Email Address"
+                          required
                         />
                       </Col>
-                      <Col size={12} className="px-1">
+                      <Col xs={12} className="px-1">
                         <textarea
                           rows="6"
                           id="message"
                           name="message"
                           placeholder="Message"
+                          required
                         ></textarea>
                         <button style={{ width: "100%" }} type="submit">
                           <span>Send</span>

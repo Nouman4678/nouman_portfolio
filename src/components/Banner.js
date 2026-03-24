@@ -61,7 +61,7 @@ export const Banner = () => {
     // Banner section
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
@@ -69,7 +69,7 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1 style={{fontSize:"45px"}}>{`Hi! I'm`} <span style={{color:"green"}} className="txt-rotate" dataPeriod="500" data-rotate='[ "Nouman Nadeem", " a Frontend Developer", "a Software Engineer" ]'><span className="wrap">{text}</span></span></h1>
                 <p className="shorten-paragraph">A Frontend focused Web Developer with expertise in developing and implementing front-end solutions for high-profile organizations. Proven track record in software development, adept at contributing to all phases of development cycle.</p>
-                  <a href="#connect" style={{textDecoration:"none"}}><button>Let’s Connect <ArrowRightCircle size={25} /></button></a>
+                  <a href="/#connect" style={{textDecoration:"none"}}><button>Let's Connect <ArrowRightCircle size={25} /></button></a>
               </div>}
             </TrackVisibility>
           </Col>
@@ -77,7 +77,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} style={{marginTop:"25px",height:"275px",borderRadius:"10px"}} alt="Header Img"/>
+                  <img src={headerImg} style={{marginTop:"25px", maxWidth:"100%", height:"auto",borderRadius:"10px"}} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>

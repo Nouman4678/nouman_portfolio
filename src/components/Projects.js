@@ -1,5 +1,5 @@
 // Import necessary components and assets
-import { Container, Row, Col, Tab } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/social magic.png";
 import projImg2 from "../assets/img/youtube-clone.png";
@@ -58,28 +58,24 @@ export const Projects = () => {
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={12}>
+          <Col xs={12}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Projects</h2>
                   <p>Here you will find some of the projects that I created with each project containing its brief description and a link to access it live.</p>
-                  <Tab.Container id="projects-tabs">
-                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                      <Row>
-                        {projects.map((project, index) => (
-                          <ProjectCard key={index} {...project} />
-                        ))}
-                      </Row>
-                    </Tab.Content>
-                  </Tab.Container>
+                  <Row className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    {projects.map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
+                  </Row>
                 </div>
               }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="imag" />
+      <img className="background-image-right" src={colorSharp2} alt="Background texture" />
     </section>
   );
 }
